@@ -6,6 +6,7 @@ License:	GPL
 Group:		Applications/Multimedia
 Source0:	ftp://ftp.osuosl.org/pub/pculture.org/democracy/src/Democracy-%{version}.tar.gz
 # Source0-md5:	0b92aa3efb2a93e7c066152137fcf9fa
+Patch0:		%{name}-lib64.patch
 URL:		http://www.getdemocracy.com/
 BuildRequires:	boost-python-devel
 BuildRequires:	libfame
@@ -30,13 +31,18 @@ and VLC media player (or Xine Media Player under GNU/Linux).
 
 %prep
 %setup -q -n Democracy-%{version}
+%if "%{_lib}" != "lib"
+%patch0 -p1
+%endif
 
 mv platform/gtk-x11/README README.gtk-x11
 
 %build
 cd platform/gtk-x11
 
-CFLAGS="%{rpmcflags}" %{__python} setup.py build
+CC="%{__cc}" \
+CFLAGS="%{rpmcflags}" \
+%{__python} setup.py build
 
 %install
 rm -rf $RPM_BUILD_ROOT
