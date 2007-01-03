@@ -15,8 +15,11 @@ BuildRequires:	python-devel >= 1:2.4
 BuildRequires:	python-pygtk-devel
 BuildRequires:	xine-lib-devel
 BuildRequires:	xulrunner-devel
+Requires:	gstreamer-imagesink-x
 Requires:	python-dbus
+Requires:	python-gnome-extras-mozilla
 Requires:	python-gnome-vfs
+Requires:	python-gstreamer
 %pyrequires_eq  python
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
