@@ -1,7 +1,7 @@
 Summary:	Internet television application
 Name:		democracy
 Version:	0.9.2.2
-Release:	0.1
+Release:	0.2
 License:	GPL
 Group:		Applications/Multimedia
 Source0:	ftp://ftp.osuosl.org/pub/pculture.org/democracy/src/Democracy-%{version}.tar.gz
@@ -10,12 +10,13 @@ Patch0:		%{name}-lib64.patch
 URL:		http://www.getdemocracy.com/
 BuildRequires:	boost-python-devel
 BuildRequires:	libfame
-BuildRequires:	mozilla-firefox-devel
 BuildRequires:	python-Pyrex
 BuildRequires:	python-devel >= 1:2.4
 BuildRequires:	python-pygtk-devel
 BuildRequires:	xine-lib-devel
+BuildRequires:	xulrunner-devel
 Requires:	python-dbus
+Requires:	python-gnome-vfs
 %pyrequires_eq  python
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
