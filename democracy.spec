@@ -20,6 +20,7 @@ Requires:	python-dbus
 Requires:	python-gnome-extras-mozilla
 Requires:	python-gnome-vfs
 Requires:	python-gstreamer
+Requires:	python-pygtk-glade
 %pyrequires_eq  python
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
