@@ -1,0 +1,11 @@
+--- Democracy-0.9.2.2/platform/gtk-x11/setup.py~	2006-12-11 18:11:34.000000000 +0200
++++ Democracy-0.9.2.2/platform/gtk-x11/setup.py	2007-01-03 03:39:21.000000000 +0200
+@@ -223,7 +223,7 @@
+ xlib_ext = \
+     Extension("democracy.xlibhelper", 
+         [ os.path.join(frontend_implementation_dir,'xlibhelper.pyx') ],
+-        library_dirs = ['/usr/X11R6/lib'],
++        library_dirs = ['/usr/X11R6/lib64'],
+         libraries = ['X11'],
+     )
+ 
