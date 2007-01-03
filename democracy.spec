@@ -1,3 +1,8 @@
+# TODO
+# - make /usr/lib64/python2.4/site-packages/democracy/MozillaBrowser.so
+#   to be linked with RPATH /usr/lib64/xulrunner. actually to fix as setuputils
+#   passes -R which is not accepted by compiler (should be -Wl,-rpath,/usr/lib64/xulrunner).
+#   until then start program with 'LD_LIBRARY_PATH=/usr/lib64/xulrunner democracy'
 Summary:	Internet television application
 Name:		democracy
 Version:	0.9.2.2
