@@ -27,7 +27,7 @@ Requires:	python-gnome-vfs
 Requires:	python-gstreamer
 Requires:	python-pygtk-glade
 Requires:	shared-mime-info
-%pyrequires_eq  python
+%pyrequires_eq	python
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
