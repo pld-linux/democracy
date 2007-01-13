@@ -4,11 +4,12 @@
 #   passes -R which is not accepted by compiler (should be -Wl,-rpath,/usr/lib64/xulrunner).
 #   until then start program with 'LD_LIBRARY_PATH=/usr/lib64/xulrunner democracy'
 Summary:	Internet television application
+Summary(pl):	Aplikacja do telewizji internetowej
 Name:		democracy
 Version:	0.9.2.2
 Release:	0.2
 License:	GPL
-Group:		Applications/Multimedia
+Group:		X11/Applications/Multimedia
 Source0:	ftp://ftp.osuosl.org/pub/pculture.org/democracy/src/Democracy-%{version}.tar.gz
 # Source0-md5:	0b92aa3efb2a93e7c066152137fcf9fa
 Patch0:		%{name}-lib64.patch
@@ -39,6 +40,17 @@ these channels.
 
 Democracy Player integrates an RSS aggregator, a BitTorrent client,
 and VLC media player (or Xine Media Player under GNU/Linux).
+
+%description -l pl
+Democracy Player (znany tak¿e jako Democracy albo DTV) to aplikacja do
+telewizji internetowej stworzona przez fundacjê Participatory Culture
+Foundation (PCF). Potrafi automatycznie ¶ci±gaæ filmy z "kana³ów"
+opartych o RSS, a tak¿e zarz±dzaæ i odtwarzaæ filmy uzyskane z tych
+kana³ów.
+
+Democracy Player integruje siê z agregatorem RSS, klientem BitTorrenta
+oraz odtwarzaczem multimedialnym VLC (lub Xine Media Playerem pod
+Linuksem).
 
 %prep
 %setup -q -n Democracy-%{version}
