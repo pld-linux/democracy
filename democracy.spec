@@ -4,7 +4,7 @@
 #   passes -R which is not accepted by compiler (should be -Wl,-rpath,/usr/lib64/xulrunner).
 #   until then start program with 'LD_LIBRARY_PATH=/usr/lib64/xulrunner democracy'
 Summary:	Internet television application
-Summary(pl.UTF-8):   Aplikacja do telewizji internetowej
+Summary(pl.UTF-8):	Aplikacja do telewizji internetowej
 Name:		democracy
 Version:	0.9.2.2
 Release:	0.2
