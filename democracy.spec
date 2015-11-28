@@ -63,15 +63,13 @@ mv platform/gtk-x11/README README.gtk-x11
 %build
 cd platform/gtk-x11
 
-CC="%{__cc}" \
-CFLAGS="%{rpmcflags}" \
-%{__python} setup.py build
+%py_build
 
 %install
 rm -rf $RPM_BUILD_ROOT
 
 cd platform/gtk-x11
-%{__python} setup.py install -O1 --skip-build --root $RPM_BUILD_ROOT
+%py_install -O1 --skip-build --root $RPM_BUILD_ROOT
 cd ../..
 
 %py_postclean $RPM_BUILD_ROOT%{py_sitedir}/democracy
