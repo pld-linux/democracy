@@ -14,6 +14,7 @@ Source0:	ftp://ftp.osuosl.org/pub/pculture.org/democracy/src/Democracy-%{version
 # Source0-md5:	0b92aa3efb2a93e7c066152137fcf9fa
 Patch0:		%{name}-lib64.patch
 URL:		http://www.getdemocracy.com/
+BuildRequires:	rpmbuild(macros) >= 1.710
 BuildRequires:	boost-python-devel
 BuildRequires:	libfame
 BuildRequires:	python-Pyrex
